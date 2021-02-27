@@ -103,3 +103,4 @@ export default {
     name:'AppealForm',
 }
 </script>
+<style lang="sass" src="@/media/sass/components/AppealForm.sass" scoped></style>

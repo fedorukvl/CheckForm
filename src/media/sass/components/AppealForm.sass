@@ -1,0 +1,149 @@
+.appeal
+    font-family: Arial
+    &__title
+        font-size: 20px
+    .appeal-form
+        &__field,&__submit,
+            border-radius: 3px
+            -moz-border-radius: 3px
+            -webkit-border-radius: 3px
+            border: 1px solid #e2e2e2
+        &__field
+            padding: 30px
+        &__submit,&__submit_isDisabled
+            background-color: #f99966
+            border: 1px solid #f99966
+            color: white
+            padding: 5px 10px
+            margin-top: 30px
+            text-transform: uppercase
+            &_isDisabled
+                border: 1px solid #e2e2e2
+                background-color: #e2e2e2
+                pointer-events: none
+        .branch
+            &__title
+                font-size: 16px
+                font-weight: normal
+                margin: 0 0 7px 0
+                .required
+                    color: red
+            &__city-list,&__city-list_isDisabled
+                width: 200px
+                padding: 5px
+                border-radius: 3px
+                -moz-border-radius: 3px
+                -webkit-border-radius: 3px
+                border: 1px solid #e2e2e2
+                color: #b1b0b0
+                &_isDisabled
+                    pointer-events: none
+                    background-color: #f4f4f4
+            &__option
+                margin-top: 10px
+                &_isOnline //Сделал кастомный чекбокс, чтобы могли изменить его стили в состоянии checked, как в макетe
+                    position: absolute
+                    z-index: -1
+                    opacity: 0
+                    &+.branch__input-label
+                        width: fit-content
+                        display: flex
+                        display: -webkit-box
+                        display: -webkit-flex
+                        display: -ms-flexbox
+                        align-items: center
+                        -webkit-align-items: center
+                    &+.branch__input-label::before
+                        display: inline-block
+                        content: ''
+                        width: 18px
+                        height: 18px
+                        margin: 0 9px 0 0
+                        text-align: center
+                        border-radius: 3px
+                        -moz-border-radius: 3px
+                        -webkit-border-radius: 3px
+                        border: 1px solid black
+                    &:checked+.branch__input-label::before
+                        font-weight: bold
+                        content: "✓"
+            &__input-label
+                font-size: 14px
+        .topic
+            margin-top: 30px
+            &__title
+                font-size: 16px
+                font-weight: normal
+                margin-bottom: 11px
+                .required
+                    color: red
+            &__reason
+                display: flex
+                display: -webkit-box
+                display: -webkit-flex
+                display: -ms-flexbox
+                align-items: center
+                -webkit-align-items: center
+                margin-bottom: 10px
+                &_isQuality,&_isAgreement,&_isLetter,&_isUserArea //Сделал кастомные радиокнопки, чтобы могли изменить его стили в состоянии checked, как в макетe
+                    position: absolute
+                    z-index: -1
+                    opacity: 0
+                    &+.topic__input-label
+                        width: fit-content
+                        display: flex
+                        display: -webkit-box
+                        display: -webkit-flex
+                        display: -ms-flexbox
+                        align-items: center
+                        -webkit-align-items: center
+                    &+.topic__input-label::before
+                        display: inline-block
+                        content: ""
+                        width: 16px
+                        height: 16px
+                        margin: 0 9px 0 0
+                        padding: 2px
+                        text-align: center
+                        border-radius: 50%
+                        -moz-border-radius: 50%
+                        -webkit-border-radius: 50%
+                        border: 1px solid black
+                    &:checked+.topic__input-label::before
+                        content: "\26AB"
+                        font-size: 11px
+                &_isAnother
+                    width: 200px
+                    padding: 7px
+                    border-radius: 3px
+                    -moz-border-radius: 3px
+                    -webkit-border-radius: 3px
+                    border: 1px solid #e2e2e2
+            &__input-label
+                font-size: 14px
+        .problem-description
+            margin-top: 30px
+            &__title
+                font-size: 16px
+                font-weight: normal
+                margin-bottom: 7px
+                .required
+                    color: red
+            &__reason
+                width: 100%
+                height: 100px
+                padding: 5px
+                font-family: inherit
+                border-radius: 3px
+                -moz-border-radius: 3px
+                -webkit-border-radius: 3px
+                border: 1px solid #e2e2e2
+                resize: none
+        .file-loading
+            margin-top: 30px
+            &__title
+                font-size: 16px
+                font-weight: normal
+                margin-bottom: 7px
+            &__hint
+                font-size: 14px
