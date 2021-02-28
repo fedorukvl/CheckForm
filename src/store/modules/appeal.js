@@ -8,6 +8,28 @@ const state =()=>({
     appeal: null,
 });
 
+const getters={
+    IS_LOADING(state){
+        return state.isLoading;
+    },
+    IS_ONLINE(state){
+        return state.isOnline;
+    },
+    IS_OTHER_REASON(state){
+        return state.isOtherReason;
+    },
+    GET_ERROR(state){
+        return state.error;
+    },
+    GET_CITY_LIST(state){
+        if(state.cityList){
+            return state.cityList;
+        }else{
+            return null;
+        }
+    },
+}
+
 const mutations={
     SET_CITY_LIST(state,cityList){
         state.cityList=cityList;
@@ -61,6 +83,7 @@ const actions={
 export default{
     namespaced: true,
     state,
+    getters,
     mutations,
     actions,
 }
