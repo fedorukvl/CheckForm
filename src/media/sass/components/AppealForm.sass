@@ -11,6 +11,7 @@
         &__field
             padding: 30px
         &__submit,&__submit_isDisabled
+            cursor: pointer
             background-color: #f99966
             border: 1px solid #f99966
             color: white
@@ -27,8 +28,10 @@
                 font-weight: normal
                 margin: 0 0 7px 0
                 .required
+                    cursor: pointer
                     color: red
             &__city-list,&__city-list_isDisabled
+                cursor: pointer
                 width: 200px
                 padding: 5px
                 border-radius: 3px
@@ -69,6 +72,8 @@
                         content: "✓"
             &__input-label
                 font-size: 14px
+                &_isEmpty::before
+                    content: "" !important
         .topic
             margin-top: 30px
             &__title
@@ -76,6 +81,7 @@
                 font-weight: normal
                 margin-bottom: 11px
                 .required
+                    cursor: pointer
                     color: red
             &__reason
                 display: flex
@@ -100,6 +106,7 @@
                     &+.topic__input-label::before
                         display: inline-block
                         content: ""
+                        cursor: pointer
                         width: 16px
                         height: 16px
                         margin: 0 9px 0 0
@@ -121,6 +128,8 @@
                     border: 1px solid #e2e2e2
             &__input-label
                 font-size: 14px
+                &_isEmpty::before
+                    content: "" !important
         .problem-description
             margin-top: 30px
             &__title
@@ -128,6 +137,7 @@
                 font-weight: normal
                 margin-bottom: 7px
                 .required
+                    cursor: pointer
                     color: red
             &__reason
                 width: 100%
