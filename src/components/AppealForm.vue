@@ -184,6 +184,13 @@ export default {
           }  
         },
     },
+    watch:{
+        isDataSended(){
+            if(this.isDataSended){
+                this.$router.push({name:'success'});
+            }
+        },
+    },
     methods:{
         ...mapActions('appeal',{
             fetchCities: 'FETCH_CITIES',
