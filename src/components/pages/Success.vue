@@ -6,8 +6,17 @@
 </template>
 
 <script>
+import store from '../../store'
+
 export default {
     name: 'Seccess',
+    beforeRouteEnter (to, from, next) {
+        if (store.state.appeal.isDataSended) {
+            next()
+        } else {
+            next(false)
+        }
+    },
 }
 </script>
 
