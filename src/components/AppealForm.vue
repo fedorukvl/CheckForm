@@ -173,7 +173,7 @@ export default {
             isUserOnline: 'IS_ONLINE',
             isOtherReasonSelected: 'IS_OTHER_REASON',
             anotherReason: 'GET_ANOTHER_REASON',
-            error: 'GET_ERROR',
+            isDataSended: 'IS_DATA_SENDED',
             cityList: 'GET_CITY_LIST',
         }),
         isFormCorrect(){
