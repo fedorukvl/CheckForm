@@ -1,4 +1,4 @@
-# checkform
+# Установка проекта
 
 ## Project setup
 ```
