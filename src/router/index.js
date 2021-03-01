@@ -1,8 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import AppealForm from '../components/AppealForm.vue';
-import Success from '../components/pages/Success.vue';
-import Error from '../components/pages/Error.vue';
+
 Vue.use(VueRouter);
 
 export const router =new VueRouter({
@@ -12,16 +10,16 @@ export const router =new VueRouter({
         {
             path:'/', //В идеале, стартовым путем бы была домашняя страница, но т.к. по ТЗ этот момент не предусмотрен, будем отталкиваться от нее :)
             name:'appeal',
-            component: AppealForm,
+            component: ()=> import('../components/AppealForm.vue'),
         },
         {
             path:'/success',
             name:'success',
-            component: Success,
+            component: ()=> import('../components/pages/Success.vue'),
         },
         {
             path: '*',
-            component: Error,
+            component: ()=> import('../components/pages/Error.vue'),
         }
     ],
 })
