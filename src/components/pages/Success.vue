@@ -7,6 +7,7 @@
 
 <script>
 import store from '../../store'
+import {router} from '../../router'
 
 export default {
     name: 'Seccess',
@@ -14,6 +15,7 @@ export default {
         if (store.state.appeal.isDataSended) {
             next()
         } else {
+            router.push({name:'appeal'})
             next(false)
         }
     },
